@@ -8,3 +8,10 @@ transformer.py — A custom Vision Transformer (ViT) implementation. Written lar
 networks.py — A collection of alternative architectures (MLP, CNN, Residual CNN) plus reusable training/testing loop utilities. Tracks batch loss, validation loss, and accuracy at regular intervals.
 
 viz.py — Minimal visualization module. Plots training/validation curves and gradient norms across network layers.
+
+NOTE: Poetry seems to have trouble with CUDA-enabled versions of torch. As a workaround, run
+
+```.venv\Scripts\activate
+pip install torch==2.9.1+cu128 torchvision==0.24.1+cu128 --index-url https://download.pytorch.org/whl/cu128```
+
+to bypass this issue.
